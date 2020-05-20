@@ -63,7 +63,20 @@ TBA
 
 ## Authors
 
-TBA
+👤 **Elbie Moonga**
+
+- GitHub: [@Elbie-Em](https://github.com/Elbie-em)
+- Twitter: [ElbieEm](https://twitter.com/ElbieEm)
+- LinkedIn: [elbie-moonga](https://www.linkedin.com/in/elbie-moonga-253bbb12b/) 
+
+
+👤 **Jose Fernandez Caminero**
+
+- Github: [@fdezcaminero](https://github.com/fdezcaminero)
+- Twitter: [@fdezcaminero](https://twitter.com/fdezcaminero)
+- Linkedin: [Linkedin](https://www.linkedin.com/in/fdezcaminero/)
+
+---
 
 ## 🤝 Contributing
 
