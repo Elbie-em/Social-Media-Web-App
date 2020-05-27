@@ -31,5 +31,5 @@ RSpec.describe FriendRequest, type: :model do
         should belong_to(:requestee)
       end
     end
-  end 
+  end
 end
