@@ -20,4 +20,16 @@ RSpec.describe FriendRequest, type: :model do
       expect(subject).to_not be_valid
     end
   end
+
+  describe 'Associations' do
+    context 'Belonging to user model' do
+      it 'belongs to a requester' do
+        should belong_to(:requester)
+      end
+
+      it 'belongs to a requestee' do
+        should belong_to(:requestee)
+      end
+    end
+  end 
 end
