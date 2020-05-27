@@ -317,6 +317,18 @@ form {
   }
 }
 
+.sp {
+  margin-left: 10px;
+}
+
+.request_btn {
+  background-color: $primary-color-dark;
+  color: $primary-color-light;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
 @media only screen and (min-width: 480px) {
   form {
     width: 60%;
@@ -342,3 +354,4 @@ form {
     width: 50%;
   }
 }
+

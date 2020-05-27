@@ -20,7 +20,7 @@ class FriendshipsController < ApplicationController
         friendship = Friendship.find_by(params[:friendship_id])
         if friendship
             friendship.destroy
-            redirect_to current_user, notice: 'You removed a friend'
+            redirect_to users_path, notice: 'You removed a friend'
         end
     end
    

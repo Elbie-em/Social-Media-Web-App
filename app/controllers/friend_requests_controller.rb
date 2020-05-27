@@ -1,10 +1,10 @@
 class FriendRequestsController < ApplicationController
     def new
-        @friend_request = current_user.friend_requests.build
+        @friend_request = current_user.friend_requests.new
     end
     
     def create
-        @friend_request = current_user.requests.build(requester_id: params[requester_id], requestee_id: params[requestee_id])
+        @friend_request = current_user.friend_requests.build(requester_id: params[:requester_id],requestee_id: params[:requestee_id])
         @user = User.find(params[:requestee_id])
         if @friend_request.save
             redirect_to user_path(@user), notice: 'Request Sent'
@@ -14,9 +14,11 @@ class FriendRequestsController < ApplicationController
     end
 
     def destroy
-        @friend_request.destroy
-        redirect_to current_user, notice: 'You rejected the friend request'
+        friend_request = FriendRequest.find_by(params[:friend_request_id])
+        if friend_request
+            friend_request.destroy
+            redirect_to users_path, notice: 'You canceled the request!'
+        end
     end
-
 
 end
