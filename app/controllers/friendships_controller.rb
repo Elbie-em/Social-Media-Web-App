@@ -1,4 +1,3 @@
-# rubocop:disable Layout/LineLength
 # rubocop:disable Style/GuardClause
 
 class FriendshipsController < ApplicationController
@@ -27,5 +26,4 @@ class FriendshipsController < ApplicationController
   end
 end
 
-# rubocop:enable Layout/LineLength
 # rubocop:enable Style/GuardClause
