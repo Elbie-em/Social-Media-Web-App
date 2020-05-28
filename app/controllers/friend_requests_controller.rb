@@ -7,7 +7,7 @@ class FriendRequestsController < ApplicationController
   end
 
   def create
-    @friend_request = current_user.friend_requests.build(requester_id: params[:requester_id], requestee_id: params[:requestee_id])
+    @friend_request = current_user.friend_requests.build(requestee_id: params[:requestee_id])
     @user = User.find(params[:requestee_id])
     if @friend_request.save
       redirect_to user_path(@user), notice: 'Request Sent'

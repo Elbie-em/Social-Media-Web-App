@@ -13,7 +13,7 @@ class User < ApplicationRecord
   has_many :requestees, through: :friend_requests
   has_many :received_requests, class_name: 'FriendRequest', foreign_key: :requestee_id, dependent: :destroy
   has_many :friendships, foreign_key: :requestee_id, dependent: :destroy
-  has_many :friends, through: :friendships, foreign_key: :requester_id, source: 'requester'
+  has_many :friends, through: :friendships, foreign_key: :requester_id, source: 'requestee'
   has_many :accepted_requests, class_name: 'Friendship', foreign_key: :requester_id, dependent: :destroy
 
   def sent_request(current_user, user)
