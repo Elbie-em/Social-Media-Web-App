@@ -3,7 +3,7 @@
 # rubocop:disable Metrics/CyclomaticComplexity
 
 module UsersHelper
-  def no_current_user_btn(user)
+  def not_current_user_btn(user)
     request_btn(user) if user != current_user
   end
 
