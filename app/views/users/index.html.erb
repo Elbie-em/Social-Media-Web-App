@@ -3,7 +3,7 @@
     <% @users.each do |user| %>
         <li>
           Name: <%= user.name %>
-          <%= request_btn(user) %>
+          <%= request_button(user) %>
           <span class="profile-link">
             <%= link_to 'See Profile',  user_path(user), class: 'profile-link' %>
           </span>
