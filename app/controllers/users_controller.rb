@@ -3,6 +3,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.where.not(id: current_user)
+    @users.each do |user|
+      @sent_request = current_user.sent_request(current_user, user)
+      @received_request = current_user.received_request(current_user, user)
+      @friendship = current_user.friendship(current_user, user)
+      @accepted_friendship = current_user.accepted_friendship(current_user, user)
+    end
   end
 
   def show

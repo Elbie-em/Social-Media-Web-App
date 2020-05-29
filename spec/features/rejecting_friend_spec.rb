@@ -1,3 +1,5 @@
+# rubocop:disable Style/GlobalVars
+
 require 'rails_helper'
 
 RSpec.describe 'Accepting Friendship', type: :feature do
@@ -5,7 +7,6 @@ RSpec.describe 'Accepting Friendship', type: :feature do
     $user_a = User.create!(name: 'example1', email: 'user1@example.com', password: 'password1')
     $user_b = User.create!(name: 'example2', email: 'user2@example.com', password: 'password2')
   end
-  
 
   it 'is accepting a user to be friends' do
     visit new_user_session_path
@@ -28,3 +29,5 @@ RSpec.describe 'Accepting Friendship', type: :feature do
     expect(page).to have_content('Send Friend Request')
   end
 end
+
+# rubocop:enable Style/GlobalVars

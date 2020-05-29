@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
   end
 
   it 'is not valid with a name longer than 20 characters' do
-    user.name = "john doe of the lost boys"
+    user.name = 'john doe of the lost boys'
     expect(user).to_not be_valid
   end
 
@@ -21,7 +21,6 @@ RSpec.describe User, type: :model do
     user.email = nil
     expect(user).to_not be_valid
   end
-
 
   describe 'Associations' do
     context 'Having many from the different existent models' do

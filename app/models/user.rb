@@ -31,5 +31,4 @@ class User < ApplicationRecord
   def accepted_friendship(current_user, user)
     current_user.accepted_requests.find_by(requestee: user.id, requester: current_user.id)
   end
-  
 end

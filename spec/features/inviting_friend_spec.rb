@@ -1,4 +1,4 @@
-# rubocop:disable Lint/UselessAssignment
+# rubocop:disable Style/GlobalVars
 
 require 'rails_helper'
 
@@ -21,4 +21,4 @@ RSpec.describe 'Inviting to Friendship', type: :feature do
   end
 end
 
-# rubocop:enable Lint/UselessAssignment
+# rubocop:enable Style/GlobalVars

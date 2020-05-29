@@ -168,6 +168,12 @@ form {
   text-transform: capitalize;
 }
 
+.fc-count {
+  color: $primary-color-dark;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .new_post,
 .new_comment{
   display: flex;

@@ -1,3 +1,5 @@
+# rubocop:disable Style/GlobalVars
+
 require 'rails_helper'
 
 RSpec.describe 'Accepting Friendship', type: :feature do
@@ -26,3 +28,5 @@ RSpec.describe 'Accepting Friendship', type: :feature do
     expect(page).to have_content('Remove Friend')
   end
 end
+
+# rubocop:enable Style/GlobalVars
