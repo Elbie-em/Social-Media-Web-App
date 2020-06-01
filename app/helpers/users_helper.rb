@@ -24,6 +24,14 @@ module UsersHelper
       link_to('Send Friend Request', friend_requests_path(requester_id: current_user.id, requestee_id: user.id), method: :post, class: 'request_btn')
     end
   end
+
+  def user_posts(current_user, user, posts)
+    if User.friendship(current_user, user) || User.accepted_friendship(current_user, user) || user == current_user
+      render partial: posts
+    else
+      content_tag(:span, 'You cannot view the posts of this user until you are friends!')
+    end
+  end
 end
 
 # rubocop:enable Layout/LineLength
