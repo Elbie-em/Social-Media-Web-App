@@ -43,7 +43,7 @@ a {
   color: $primary-color-light;
 
   .menu {
-    width: 80%;
+    width: 60%;
     justify-content: space-between;
 
     .menu-item {
@@ -166,6 +166,12 @@ form {
   text-align: center;
   margin-bottom: 16px;
   text-transform: capitalize;
+}
+
+.fc-count {
+  color: $primary-color-dark;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .new_post,
@@ -317,6 +323,18 @@ form {
   }
 }
 
+.sp {
+  margin-left: 10px;
+}
+
+.request_btn {
+  background-color: $primary-color-dark;
+  color: $primary-color-light;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 10px;
+}
+
 @media only screen and (min-width: 480px) {
   form {
     width: 60%;
@@ -342,3 +360,4 @@ form {
     width: 50%;
   }
 }
+
