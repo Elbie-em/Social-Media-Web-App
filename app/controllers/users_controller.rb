@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.where.not(id: current_user)
+    logger.debug "LOOK AT ME IM DEBUGGING, (LIKE A VIP) now at AllUsers: #{params[:user_id]}" 
   end
 
   def show

@@ -20,9 +20,12 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    friendship = Friendship.find_by(params[:friendship_id])
-    if friendship
-      friendship.destroy
+    friendships = Friendship.where(requestee_id: params[:requester_id],  requester_id: current_user.id).or(Friendship.where(requestee_id: current_user.id, requester_id: params[:requester_id]))
+    logger.debug "LOOK AT ME IM DEBUGGING #{friendships.count}" 
+    if !friendships.empty?
+      friendships.each do |f|
+        f.destroy
+      end
       redirect_to users_path, notice: 'You removed a friend'
     end
   end
