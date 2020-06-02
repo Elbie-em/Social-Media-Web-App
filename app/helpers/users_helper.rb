@@ -18,15 +18,15 @@ module UsersHelper
       end
     elsif User.friendship(current_user, user)
       link_to('Remove Friend', friendship_path(id: User.friendship(current_user, user).id), method: :delete, class: 'request_btn')
-    elsif User.accepted_friendship(current_user, user)
-      link_to('Remove Friend', friendship_path(id: User.accepted_friendship(current_user, user).id), method: :delete, class: 'request_btn')
+    #elsif User.accepted_friendship(current_user, user)
+      #link_to('Remove Friend', friendship_path(id: User.accepted_friendship(current_user, user).id), method: :delete, class: 'request_btn')
     elsif User.sent_request(current_user, user).nil? && User.received_request(current_user, user).nil? && User.friendship(current_user, user).nil?
       link_to('Send Friend Request', friend_requests_path(requester_id: current_user.id, requestee_id: user.id), method: :post, class: 'request_btn')
     end
   end
 
   def user_posts(current_user, user, posts)
-    if User.friendship(current_user, user) || User.accepted_friendship(current_user, user) || user == current_user
+    if User.friendship(current_user, user) || user == current_user
       render partial: posts
     else
       content_tag(:span, 'You cannot view the posts of this user until you are friends!')

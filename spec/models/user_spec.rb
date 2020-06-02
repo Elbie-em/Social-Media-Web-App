@@ -32,7 +32,7 @@ RSpec.describe User, type: :model do
       it { should have_many(:received_requests) }
       it { should have_many(:friendships) }
       it { should have_many(:friends) }
-      it { should have_many(:accepted_requests) }
+      #it { should have_many(:accepted_requests) }
     end
   end
 end
