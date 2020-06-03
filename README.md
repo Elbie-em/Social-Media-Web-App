@@ -1,16 +1,18 @@
-# Scaffold for social media app with Ruby on Rails
+# Social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> Social media app called "Stay In Touch".
 
 ## Built With
 
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
+- VSCode
+- Terminal
+- Rubocop
 
 ## Live Demo
 
-TBA
-
+Visit live demo [here!](https://peaceful-coast-25449.herokuapp.com/)
 
 ## Getting Started
 
@@ -90,9 +92,12 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+- [Microverse](https://microverse.org)
+
+---
 
 ## 📝 License
 
-TBA
+This project is [MIT](/LICENSE) licensed.
 
+---
