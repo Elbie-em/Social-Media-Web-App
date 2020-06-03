@@ -2,6 +2,13 @@
 
 > Social media app called "Stay In Touch".
 
+# Screenshots!
+
+![screenshot](./docs/stayintouchscreenshot1.png)
+
+
+![screenshot](./docs/stayintouchscreenshot2.png)
+
 
 ## Built With
 
