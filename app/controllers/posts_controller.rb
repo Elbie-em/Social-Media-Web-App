@@ -26,10 +26,6 @@ class PostsController < ApplicationController
       current_user_friends << f.requester_id
     end
 
-    current_user.accepted_requests.each do |f|
-      current_user_friends << f.requestee_id
-    end
-
     @timeline_posts ||= Post.where(user_id: current_user_friends).ordered_by_most_recent
   end
 
